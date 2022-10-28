@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
+import "./app.css"
 
 const App: React.FC = () => {
+  const [count, setCount] = useState(0)
   return (
-    <>
-      <div>Hello Guys</div>
-      <div> Does this work lmao</div>
-    </>
+    <div className="app">
+      <header className="app-header">
+        <div>Hello Guys</div>
+        <button onClick={() => setCount(count => count + 1)}>Count is {count}</button>
+      </header>
+    </div>
   )
 }
 
